@@ -27,7 +27,7 @@ class SebhaTab extends State<TasbeehScreen> with SingleTickerProviderStateMixin 
     super.dispose();
   }
 
-  void _incrementTasbeeh() {
+  void incrementTasbeeh() {
     setState(() {
       tasbeehCount++;
 
@@ -59,7 +59,7 @@ class SebhaTab extends State<TasbeehScreen> with SingleTickerProviderStateMixin 
                       Transform.translate(
                         offset: Offset(0, 110),
                         child: GestureDetector(
-                          onTap: _incrementTasbeeh,
+                          onTap: incrementTasbeeh,
                           child: AnimatedBuilder(
                             animation: controller,
                             builder: (context, child) {
@@ -104,9 +104,8 @@ class SebhaTab extends State<TasbeehScreen> with SingleTickerProviderStateMixin 
                   ),
                   SizedBox(height: 20),
 
-                  // Tasbeeh Button
                   ElevatedButton(
-                    onPressed: _incrementTasbeeh,
+                    onPressed: incrementTasbeeh,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xffB7935F),
                       shape: RoundedRectangleBorder(
